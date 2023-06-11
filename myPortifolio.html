@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Funcionamento do Sistema de Estacionamento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      margin-bottom: 15px;
+    }
+    
+    .highlight {
+      background-color: #ffffcc;
+      padding: 5px;
+      display: inline-block;
+    }
+    
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .back-button {
+      padding: 10px 20px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Funcionamento do Sistema de Estacionamento</h1>
+  
+  <p>O funcionamento do sistema é dado a partir da análise contínua da disponibilidade de vagas, através do uso de sensores em cada uma das vagas do estacionamento.</p>
+  
+  <p>Na entrada do estacionamento haverá um LED (Diodo emissor de Luz) RGB sinalizando se há disponibilidade de vagas. Quando estiver <span class="highlight">verde</span>, representa que há vagas, e quando estiver <span class="highlight">vermelho</span>, representa que não há vagas, ou seja, na cor vermelha as vagas do estacionamento estão 100% ocupadas.</p>
+  
+  <p>Em cada vaga há um receptor de infravermelho para detecção de vaga ocupada.</p>
+  
+  <p>E para que os usuários entrem no estacionamento, devem passar por uma cancela no portão de entrada. Ela é automaticamente acionada quando há a presença de um automóvel, pois na entrada há um sensor que proporciona o funcionamento automático da cancela para facilitar a vida do usuário.</p>
+  
+  <p>Após o uso do estacionamento, os usuários deverão sair pelo próprio portão de saída, assim não formarão tumultos com os veículos que chegarão no mesmo momento.</p>
+  
+  <div class="button-container">
+    <button class="back-button" onclick="voltarAoCaminhoDeOrigem()">Voltar</button>
+  </div>
+
+  <script>
+    function voltarAoCaminhoDeOrigem() {
+      window.history.back();
+      alert('Voltando ao caminho de origem...');
+    }
+  </script>
+</body>
+</html>
