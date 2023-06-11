@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Portfólio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+    }
+    
+    #profile-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    
+    #profile-links {
+      display: flex;
+      align-items: center;
+    }
+    
+    #profile-links a {
+      color: #fff;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+    
+    #banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      background-image: url("fundoHQs.jpeg");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+    }
+    
+    #banner h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    
+    #banner p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .comic-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    
+    .comic-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .comic-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    
+    .comic-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .comic-item .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .comic-item:hover .caption {
+      opacity: 1;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .comic-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      max-width: 600px;
+    }
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    #comicTitle {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    #comicDescription {
+      margin-bottom: 20px;
+    }
+    
+    footer {
+      background-color: #333;
+      padding: 20px;
+      color: #f5f5f5;
+      text-align: center;
+    }
+    
+    #social-icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    
+    #social-icons img {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    
+    #message {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img id="profile-image" src="Perfil.jpeg" alt="Imagem de Perfil">
+    </div>
+    <div id="profile-links">
+      <a href="https://www.linkedin.com/in/guilherme-kcs/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/GuilhermeKCS" target="_blank">GitHub</a>
+    </div>
+  </header>
+  
+  <div id="banner">
+    <div class="container">
+      <h1>GuilhermeKCS</h1>
+      <p>Desenvolvedor Web</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h2>Meus Projetos</h2>
+    <div class="comic-grid">
+      <div class="comic-item">
+        <a href="Auxiliar/myPortifolio.html">
+          <img src="Fantasminha.jpeg" alt="HQ 1">
+          <div class="caption">
+            <h3>TCC ETEC</h3>
+            <p>Tecnico em eletrônica</p>
+          </div>
+        </a>
+      </div>
+      <div class="comic-item">
+        <a href="EM-DESENVOLVIMENTO.html">
+          <img src="Fantasminha2.jpeg" alt="HQ 2">
+          <div class="caption">
+            <h3>Projeto 2</h3>
+            <p>Em desenvolvimento em breve será divulgado</p>
+          </div>
+        </a>
+      </div>
+      <div class="comic-item">
+        <a href="Auxiliar/PLR.html">
+          <img src="Fantasminha3.jpeg" alt="HQ 3">
+          <div class="caption">
+            <h3>PLR</h3>
+            <p>Private label rights</p>
+          </div>
+        </a>
+      </div>
+      <div class="comic-item">
+        <a href="index.html">
+          <img src="Fantasminha4.jpeg" alt="HQ 4">
+          <div class="caption">
+            <h3>Construção Portifolio</h3>
+            <p>Tema HQs "ESTE SITE"</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div id="social-icons">
+      <a href="https://www.instagram.com/__kohler" target="_blank"><img src="insta.jpeg" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/" target="_blank"><img src="tikteko.jpeg" alt="TikTok"></a>
+    </div>
+    <p id="message">Let's work together?</p>
+  </footer>
+</body>
+</html>
